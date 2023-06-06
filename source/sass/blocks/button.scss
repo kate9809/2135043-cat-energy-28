@@ -1,0 +1,28 @@
+.button {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $white;
+  background-color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button--hero {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 7px 44px;
+}
+
+.button--rare {
+  color: $dark-gray;
+  background-color: $light-gray;
+  border: none;
+}
+
+.button--form {
+  padding: 13px 45px;
+}

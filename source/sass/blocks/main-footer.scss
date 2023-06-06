@@ -1,0 +1,16 @@
+.main-footer {
+  width: 100%;
+  background-color: $light-gray;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.main-footer__logo-wrapper {
+  padding: 20px 0;
+}
