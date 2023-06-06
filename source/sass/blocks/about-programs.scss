@@ -1,0 +1,46 @@
+.about-programs {
+  width: 100%;
+  background-color: $white;
+}
+
+.about-programs__wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.about-programs__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-block: 0;
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+.about-programs__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 24px 20px 22px;
+  text-align: left;
+  background-color: $light-gray;
+}
+
+.about-programs__icon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+}
+
+.about-programs__icon {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: $green;
+}
+
+.about-programs__title {
+  padding-top: 6px;
+}

@@ -1,0 +1,40 @@
+.hero {
+  width: 100%;
+  min-height: 480px;
+  background-color: $white;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 480px;
+  margin: 0 auto;
+}
+
+.hero__information {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 27px 35px 0 36px;
+  width: 100%;
+  min-height: 302px;
+  background-color: $green-opasity;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__button-wrapper {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.hero__button {
+  display: block;
+}

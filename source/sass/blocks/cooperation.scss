@@ -1,0 +1,36 @@
+.cooperation {
+  width: 100%;
+}
+
+.cooperation--color {
+  background-color: $light-gray;
+}
+
+.cooperation__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cooperation__information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 6px 20px 26px;
+}
+
+.cooperation__title {
+  width: min-content;
+}
+
+.cooperation__description {
+  width: min-content;
+}
+
+.cooperation iframe {
+  display: block;
+  border: none;
+  width: 100%;
+  min-height: 362px;
+  object-fit: cover;
+  cursor: pointer;
+}

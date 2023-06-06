@@ -1,0 +1,25 @@
+.description {
+  margin-block: 0;
+  padding-inline: 0;
+}
+
+.description--light {
+  color: $white;
+}
+
+.description-uppercase {
+  text-transform: uppercase;
+}
+
+.description--middle {
+  line-height: 20px;
+}
+
+.description--small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.description--height {
+  line-height: 14px;
+}
