@@ -1,4 +1,5 @@
 .list-network {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,9 +9,39 @@
   gap: 22px;
   margin-block: 0;
   padding-inline: 0;
+
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      min-width: 100%;
+      width: auto;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: $gray-pseudo;
+    }
+  }
 }
 
 .list-network__item {
+  min-width: 28px;
+  min-height: 22px;
+}
+
+.list-network__icon-wrapper {
+  position: relative;
   width: 28px;
   height: 22px;
+  padding: 10px;
+}
+
+.list-network__icon {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

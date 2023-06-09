@@ -32,10 +32,26 @@
   gap: 20px;
 }
 
-.advantages__icon {
+.advantages__icon-background {
   min-width: 60px;
   min-height: 60px;
   background-color: $green;
+}
+
+.advantages__icon-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.advantages__icon {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .advantages__description {

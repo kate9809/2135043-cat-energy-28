@@ -26,11 +26,28 @@
   width: min-content;
 }
 
-.cooperation iframe {
+.cooperation__map {
   display: block;
   border: none;
   width: 100%;
   min-height: 362px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.cooperation__link {
+  position: relative;
+  width: 100%;
+  min-height: 362px;
+  display: block;
+}
+
+.cooperation__icon {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

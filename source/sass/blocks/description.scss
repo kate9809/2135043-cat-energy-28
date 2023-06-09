@@ -7,10 +7,6 @@
   color: $white;
 }
 
-.description-uppercase {
-  text-transform: uppercase;
-}
-
 .description--middle {
   line-height: 20px;
 }
@@ -22,4 +18,9 @@
 
 .description--height {
   line-height: 14px;
+}
+
+.description--medium {
+  font-size: 16px;
+  line-height: 20px;
 }

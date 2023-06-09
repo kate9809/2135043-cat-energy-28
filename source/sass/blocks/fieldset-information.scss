@@ -2,5 +2,131 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 14px;
   border: none;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  padding: 20px 20px 19px;
+}
+
+.fieldset-information--top {
+  padding-top: 0;
+}
+
+.fieldset-information--border {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.fieldset-information__container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.fieldset-information__container--bottom {
+  margin-bottom: 5px;
+}
+
+.fieldset-information__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style-type: none;
+  margin-block: 0;
+  padding-inline: 0;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.fieldset-information__list--radio {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.fieldset-information__list--checkbox {
+  margin-top: 16px;
+  margin-bottom: 1px;
+}
+
+.fieldset-information__list--big {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.fieldset-information__control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+}
+
+.fieldset-information__control-mark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $gray-field;
+  background-color: $white;
+}
+
+.fieldset-information__control-mark--radio {
+  border-radius: 50%;
+}
+
+.fieldset-information__control-input[type="radio"]:checked + .fieldset-information__control-mark--radio {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: $green;
+  }
+}
+
+.fieldset-information__control-input[type="checkbox"]:checked + .fieldset-information__control-mark--checkbox {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 14px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url("../img/stack/icon-checkbox.svg") no-repeat center center / cover;
+  }
+}
+
+.fieldset-information__icon-wrapper {
+  position: absolute;
+  width: 17px;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17px;
+}
+
+.fieldset-information__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

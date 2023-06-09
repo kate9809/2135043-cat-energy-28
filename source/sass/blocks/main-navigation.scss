@@ -1,5 +1,4 @@
 .main-navigation {
-  width: 100%;
   min-height: 65px;
   display: flex;
   flex-direction: column;
@@ -7,7 +6,87 @@
 }
 
 .main-navigation__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $white;
+  color: $black;
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.main-navigation__item a {
+  min-height: 65px;
+  padding: 22px 69px 24px;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 16px 23px;
+    border: 0;
+  }
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 65px;
+  padding: 20px;
+  background-color: $white;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    z-index: 0;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  position: absolute;
+  content: "";
+  top: 23px;
+  right: 20px;
+  width: 24px;
+  height: 2px;
+  z-index: 2;
+  background-color: $black;
+  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 24px;
+    width: 25px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
