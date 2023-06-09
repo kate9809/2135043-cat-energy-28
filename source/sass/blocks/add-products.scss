@@ -46,10 +46,25 @@
 }
 
 .add-products__gift {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
   padding: 35px 0;
 }
 
+.add-products__picture-wrapper {
+  position: absolute;
+  content: "";
+  min-width: 100%;
+  width: auto;
+  min-height: 290px;
+  top: 35px;
+  left: 20px;
+}
+
 .add-products__gift-wrapper {
+  position: absolute;
+  content: "";
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -57,10 +72,5 @@
   min-height: 290px;
   padding: 59px 61px 43px 58px;
   text-align: center;
-  background-color: $green-opasity;
-  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../img/gift/background-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-color: transparent;
 }

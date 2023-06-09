@@ -15,8 +15,19 @@
   margin: 0 auto;
 }
 
+.hero__picture-cat-wrapper {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
 .hero__information {
-  position: relative;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -26,20 +37,15 @@
   min-height: 302px;
   margin: 0 auto;
   text-align: center;
-  background-color: $green-opasity;
-  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../img/hero/index-background-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-color: transparent;
 }
+
 
 .hero__picture-wrapper {
   position: absolute;
   content: "";
   width: 100%;
   min-height: 270px;
-  padding: 0 20px;
   margin-bottom: -135px;
   top: 80%;
   transform: translateY(-80%);
@@ -58,6 +64,10 @@
 }
 
 .hero__button-wrapper {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
   display: block;
   width: 100%;
   min-height: 40px;
