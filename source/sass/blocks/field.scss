@@ -1,5 +1,28 @@
 .field {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 14px 20px 13px;
   border: 1px solid $gray-field;
   background-color: $white;
   resize: none;
+  max-width: 100%;
+  width: 100%;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: $dark-gray;
+  }
+}
+
+.field--secondary {
+  padding: 14px 52px 13px 15px;
+}
+
+.field--textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px 12px 10px 15px;
 }

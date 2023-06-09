@@ -1,0 +1,50 @@
+.logotype {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.logotype__wrapper {
+  position: relative;
+  display: block;
+  width: 74px;
+  height: 65px;
+  padding: 12px 20px 16px;
+}
+
+.logotype__icon {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 38px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.logotype__icon-text-wrapper {
+  position: relative;
+  content: "";
+  display: block;
+  width: 141px;
+  height: 65px;
+  padding: 24px 20px;
+}
+
+.logotype__icon-text {
+  position: absolute;
+  display: block;
+  width: 101px;
+  height: 18px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

@@ -5,6 +5,7 @@
 }
 
 .hero__wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -15,16 +16,45 @@
 }
 
 .hero__information {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 25px;
-  padding: 27px 35px 0 36px;
+  padding: 27px 35px 0;
   width: 100%;
   min-height: 302px;
-  background-color: $green-opasity;
   margin: 0 auto;
   text-align: center;
+  background-color: $green-opasity;
+  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/hero/index-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.hero__picture-wrapper {
+  position: absolute;
+  content: "";
+  width: 100%;
+  min-height: 270px;
+  padding: 0 20px;
+  margin-bottom: -135px;
+  top: 80%;
+  transform: translateY(-80%);
+}
+
+.hero__picture {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 270px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .hero__button-wrapper {

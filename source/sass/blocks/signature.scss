@@ -1,3 +1,15 @@
 .signature {
   display: block;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $dark-gray;
+  text-transform: uppercase;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.signature--long {
+  margin-right: 3px;
 }

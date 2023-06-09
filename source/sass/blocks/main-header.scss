@@ -1,4 +1,7 @@
 .main-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   font-family: "Oswald Medium", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -7,7 +10,14 @@
   margin-block: 0;
   padding-inline: 0;
   background-color: $white;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  min-height: 65px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 }
