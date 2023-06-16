@@ -10,8 +10,43 @@
 .link--header {
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .link--small {
   text-transform: none;
+}
+
+.link--current {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      min-width: 100%;
+      width: auto;
+      height: 2px;
+      bottom: 13px;
+      left: 0;
+      background-color: $green;
+    }
+  }
+}
+
+.link--current-light {
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $white;
+    }
+  }
 }

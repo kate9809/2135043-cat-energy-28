@@ -8,6 +8,11 @@
   text-transform: uppercase;
   align-self: center;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .signature--long {

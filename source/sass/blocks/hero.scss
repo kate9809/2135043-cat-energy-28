@@ -13,6 +13,16 @@
   width: 100%;
   min-height: 480px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 51px 30px 0;
+    min-height: 861px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 59px 110px 82px;
+    min-height: 612px;
+  }
 }
 
 .hero__picture-cat-wrapper {
@@ -21,6 +31,35 @@
   width: 100%;
   top: 0;
   right: 0;
+  margin: 0 auto;
+  background-color: $green-opasity;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    content: "";
+    max-width: 720px;
+    max-height: 694px;
+    top: -174px;
+    right: 0;
+    margin: 0;
+    background-color: $green-opasity;
+  }
+}
+
+.hero__picture-cat {
+  margin: 0 auto;
+  width: 320px;
+  height: 302px;
+
+  @media (min-width: $desktop-width) {
+    width: 720px;
+    height: 694px;
+  }
 }
 
 .hero__information {
@@ -38,8 +77,24 @@
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
-}
 
+  @media (min-width: $tablet-width) {
+    position: static;
+    margin: 0;
+    gap: 41px;
+    padding: 0 200px 49px 88px;
+    text-align: left;
+    z-index: 2;
+    min-height: 281px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+    padding: 0 116px 49px 80px;
+    max-width: 615px;
+    min-height: 232px;
+  }
+}
 
 .hero__picture-wrapper {
   position: absolute;
@@ -49,6 +104,24 @@
   margin-bottom: -135px;
   top: 80%;
   transform: translateY(-80%);
+
+  @media (min-width: $tablet-width) {
+    max-width: 708px;
+    min-height: 609px;
+    z-index: 1;
+    left: 30px;
+    top: 100%;
+    transform: translateY(-100%);
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 552px;
+    min-height: 499px;
+    left: 558px;
+    top: -40%;
+    transform: translateY(40%);
+  }
 }
 
 .hero__picture {
@@ -61,6 +134,17 @@
   left: 0;
   right: 0;
   margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 609px;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .hero__button-wrapper {
@@ -71,8 +155,22 @@
   display: block;
   width: 100%;
   min-height: 40px;
-  padding: 0 20px;
+  padding: 0 20px 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    padding: 0;
+    left: 121px;
+    bottom: 526px;
+    z-index: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 190px;
+    bottom: 267px;
+    z-index: 2;
+  }
 }
 
 .hero__button {

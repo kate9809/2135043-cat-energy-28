@@ -1,6 +1,7 @@
 .main-footer {
   width: 100%;
   background-color: $light-gray;
+  display: flex;
 }
 
 .main-footer__wrapper {
@@ -8,12 +9,24 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px 20px;
   margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 110px;
+  }
 }
 
 .main-footer__logo-wrapper {
   position: relative;
+  display: block;
   min-width: 129px;
   min-height: 64px;
 
@@ -29,6 +42,11 @@
       background-color: $gray-pseudo;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 143px;
+    min-height: 67px;
+  }
 }
 
 .main-footer__logo {
@@ -37,6 +55,11 @@
   min-width: 129px;
   min-height: 64px;
   padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 143px;
+    min-height: 67px;
+  }
 }
 
 .main-footer__logo-icon {

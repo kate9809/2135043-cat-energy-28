@@ -15,6 +15,12 @@
   font-size: 14px;
   line-height: 18px;
   padding: 11px 44px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 26px;
+  }
 }
 
 .button--rare {
@@ -24,6 +30,14 @@
 }
 
 .button--form {
-  padding: 13px 45px;
+  padding: 7px 20px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 13px 20px;
+  }
+}
+
+.button--add-desktop {
+  min-width: 244px;
 }
