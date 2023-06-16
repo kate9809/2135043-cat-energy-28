@@ -9,21 +9,53 @@
 .cooperation__container {
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .cooperation__information {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 6px 20px 26px;
+  padding: 26px 20px 26px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 70px 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    content: "";
+    min-width: 565px;
+    min-height: 198px;
+    padding: 56px 60px 56px 80px;
+    background-color: $white;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .cooperation__title {
   width: min-content;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 4px;
+  }
 }
 
 .cooperation__description {
   width: min-content;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 7px;
+    text-align: end;
+  }
 }
 
 .cooperation__map {
@@ -33,6 +65,10 @@
   min-height: 362px;
   object-fit: cover;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
 }
 
 .cooperation__link {

@@ -22,6 +22,10 @@
       background-color: $gray-pseudo;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
 }
 
 .list-network__item {

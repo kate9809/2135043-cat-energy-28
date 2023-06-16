@@ -1,5 +1,4 @@
 .main-navigation {
-  min-height: 65px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -14,12 +13,23 @@
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 34px;
+    padding: 0 30px;
   }
 
+  @media (min-width: $desktop-width) {
+    gap: 32px;
+    padding: 0;
+    background-color: transparent;
+    max-width: 500px;
+  }
+}
+
+.main-navigation__list--light {
   @media (min-width: $desktop-width) {
     color: $white;
   }
@@ -27,13 +37,25 @@
 
 .main-navigation__item a {
   min-height: 65px;
-  padding: 22px 69px 24px;
+  padding: 22px 0 24px;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
-    padding: 18px 16px 23px;
+    padding: 17px 0 23px;
     border: 0;
+  }
+}
+
+.main-navigation__item:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
+  }
+}
+
+.main-navigation__item:first-child {
+  @media (min-width: $desktop-width) {
+    margin-right: 4px;
   }
 }
 
@@ -42,11 +64,12 @@
   content: "";
   right: 0;
   top: 0;
+  left: 256px;
   width: 64px;
   height: 65px;
   padding: 20px;
   background-color: $white;
-  z-index: 2;
+  z-index: 4;
   border: none;
   cursor: pointer;
   transition: opacity 0.5s;
@@ -55,18 +78,6 @@
     display: none;
     z-index: 0;
   }
-}
-
-.main-navigation--closed .main-navigation__toggle::before {
-  position: absolute;
-  content: "";
-  top: 23px;
-  right: 20px;
-  width: 24px;
-  height: 2px;
-  z-index: 2;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -88,5 +99,45 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+.main-navigation--opened .main-navigation__list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    content: "";
+    top: 65px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 1s;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  position: absolute;
+  content: "";
+  top: 23px;
+  right: 20px;
+  width: 24px;
+  height: 2px;
+  z-index: 4;
+  background-color: $black;
+  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+}
+
+.main-navigation--closed .main-navigation__list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    content: "";
+    top: 65px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s;
   }
 }

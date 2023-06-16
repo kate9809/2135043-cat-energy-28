@@ -1,6 +1,11 @@
 .description {
   margin-block: 0;
   padding-inline: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .description--light {
@@ -14,13 +19,38 @@
 .description--small {
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.description--small-height {
+  @media (min-width: $tablet-width) {
+    line-height: 18px;
+  }
 }
 
 .description--height {
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .description--medium {
   font-size: 16px;
   line-height: 20px;
+}
+
+.description--address {
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
