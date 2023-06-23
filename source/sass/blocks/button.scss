@@ -9,6 +9,15 @@
   text-align: center;
   padding: 10px 20px;
   cursor: pointer;
+  transition: opacity 0.5s, background-color 0.5s;
+
+  &:hover {
+    background-color: $hover-green;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .button--hero {
@@ -27,17 +36,35 @@
   color: $dark-gray;
   background-color: $light-gray;
   border: none;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    opacity: 30%;
+  }
 }
 
 .button--form {
-  padding: 7px 20px;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding: 13px 20px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px 20px;
+    min-width: 282px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 568px;
   }
 }
 
 .button--add-desktop {
-  min-width: 244px;
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    min-height: 40px;
+  }
 }

@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  z-index: 6;
+  margin-left: auto;
 }
 
 .main-navigation__list {
@@ -17,15 +19,17 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    gap: 34px;
+    gap: 33px;
     padding: 0 30px;
+    max-width: 505px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 32px;
-    padding: 0;
+    max-width: 545px;
     background-color: transparent;
-    max-width: 500px;
+    margin-left: auto;
+    padding: 0;
   }
 }
 
@@ -40,10 +44,34 @@
   padding: 22px 0 24px;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
-    padding: 17px 0 23px;
+    max-width: 64px;
+    padding: 18px 0 23px;
     border: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 70px;
+  }
+}
+
+.main-navigation__item .link--big {
+  @media (min-width: $tablet-width) {
+    max-width: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 170px;
   }
 }
 
@@ -69,10 +97,18 @@
   height: 65px;
   padding: 20px;
   background-color: $white;
-  z-index: 4;
+  z-index: 6;
   border: none;
   cursor: pointer;
   transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -109,7 +145,7 @@
     top: 65px;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 6;
     transform: scaleY(1);
     transform-origin: top;
     transition: transform 1s;
@@ -123,7 +159,7 @@
   right: 20px;
   width: 24px;
   height: 2px;
-  z-index: 4;
+  z-index: 6;
   background-color: $black;
   box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 }
@@ -135,9 +171,47 @@
     top: 65px;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 6;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 1s;
+  }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
+
+.main-navigation--nojs .main-navigation__list {
+  position: static;
+  min-height: 198px;
+  transform: none;
+}
+
+.main-navigation--nojs .main-navigation__item {
+  display: block;
+}
+
+.main-navigation--nojs ~ a {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    min-height: 65px;
+    padding: 22px 0 24px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 }

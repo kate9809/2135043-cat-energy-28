@@ -36,6 +36,23 @@
       min-width: 100%;
       width: auto;
       height: 2px;
+      bottom: 16px;
+      left: 0;
+      background-color: $green;
+    }
+  }
+}
+
+.link--current-index {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      min-width: 100%;
+      width: auto;
+      height: 2px;
       bottom: 13px;
       left: 0;
       background-color: $green;
@@ -48,5 +65,25 @@
     &::after {
       background-color: $white;
     }
+  }
+}
+
+.link--vkontakte,
+.link--youtube,
+.link--telegramm {
+  transition: color 0.5s, opacity 0.5s;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:focus {
+    outline: 0;
+    color: $green;
+  }
+
+  &:active {
+    color: $green;
+    opacity: 30%;
   }
 }

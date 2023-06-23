@@ -9,6 +9,7 @@
   gap: 22px;
   margin-block: 0;
   padding-inline: 0;
+  color: #666666;
 
   @media (max-width: $mobile-width-only) {
     &::after {
@@ -24,7 +25,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 5px;
+    gap: 24px;
+    padding: 35px 40px 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 42px 100px 37px;
   }
 }
 
@@ -43,9 +51,8 @@
 .list-network__icon {
   position: absolute;
   content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: 3px;
   right: 0;
-  margin: auto;
+  left: 0;
+  margin: 0 auto;
 }

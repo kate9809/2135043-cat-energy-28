@@ -43,13 +43,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 20px;
+    gap: 37px 60px;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 78px;
   }
 }
 
@@ -61,14 +61,9 @@
   @media (min-width: $tablet-width) {
     position: relative;
     flex-direction: column;
-    gap: 31px;
-    min-width: 344px;
+    gap: 29px;
+    max-width: 246px;
     min-height: 280px;
-    padding: 40px 26px 57px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-width: 230px;
     padding: 40px 26px 57px 0;
   }
 }
@@ -105,20 +100,20 @@
   max-width: 200px;
 
   @media (min-width: $tablet-width) {
-    max-width: 235px;
-    padding-right: 0;
+    max-width: 220px;
+    padding: 0;
     z-index: 2;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 245px;
+    max-width: 220px;
     padding-right: 0;
   }
 }
 
 .advantages__description--big {
   @media (min-width: $tablet-width) {
-    max-width: 250px;
+    max-width: 245px;
   }
 }
 
@@ -137,6 +132,10 @@
       color: $light-gray;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 230px;
+  }
 }
 
 .advantages__item--second {
@@ -153,6 +152,10 @@
       line-height: 280px;
       color: $light-gray;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 246px;
   }
 }
 
@@ -171,10 +174,16 @@
       color: $light-gray;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 248px;
+  }
 }
 
 .advantages__item--fourth {
   @media (min-width: $tablet-width) {
+    max-width: 271px;
+
     &::before {
       position: absolute;
       content: "4";
@@ -187,5 +196,10 @@
       line-height: 280px;
       color: $light-gray;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 250px;
+    padding: 40px 5px 57px 0;
   }
 }
