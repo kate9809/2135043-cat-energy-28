@@ -30,7 +30,7 @@
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    padding: 52px 69px 33px 67px;
+    padding: 51px 69px 33px 67px;
     gap: 54px;
   }
 
@@ -45,9 +45,11 @@
 
   @media (min-width: $tablet-width) {
     padding-right: 250px;
+    padding-left: 2px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 850px;
+    padding-left: 0;
   }
 }

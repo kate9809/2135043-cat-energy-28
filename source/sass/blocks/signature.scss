@@ -8,8 +8,10 @@
   text-transform: uppercase;
   align-self: center;
   flex-shrink: 0;
+  max-width: 94px;
 
   @media (min-width: $tablet-width) {
+    max-width: 117px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -17,4 +19,14 @@
 
 .signature--long {
   margin-right: 3px;
+}
+
+.signature--email {
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }

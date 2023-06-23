@@ -36,7 +36,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 22px 110px 45px;
+    padding: 12px 110px 45px;
   }
 }
 
@@ -59,8 +59,14 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px 63px;
+    gap: 63px 80px;
     padding: 40px 110px;
     margin: 0;
+  }
+}
+
+.product-catalog__button {
+  @media (min-width: $desktop-width) {
+    max-width: 168px;
   }
 }

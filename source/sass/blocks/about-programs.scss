@@ -39,7 +39,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 24px 20px 18px;
+  padding: 25px 20px 18px;
   text-align: left;
   background-color: $light-gray;
 
@@ -49,7 +49,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 570px;
+    width: 570px;
     padding: 77px 61px 55px 52px;
   }
 }
@@ -66,16 +66,17 @@
 
   @media (min-width: $tablet-width) {
     position: static;
-    min-width: 200px;
-    min-height: 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
     margin: 15px 0 27px;
     order: 2;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    min-width: 100px;
-    min-height: 100px;
+    width: 100px;
+    height: 100px;
     top: 47px;
     left: 52px;
     margin: 0;
@@ -144,7 +145,8 @@
 }
 
 .about-programs__title {
-  padding: 6px 0 7px 91px;
+  display: block;
+  padding: 5px 0 7px 69px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -156,8 +158,12 @@
 }
 
 .about-programs__description {
+  @media (min-width: $tablet-width) {
+    padding: 0 0 24px 0;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-left: 0 0 50px 162px;
+    padding: 0;
   }
 }
 
@@ -166,8 +172,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  padding: 19px 0 0 0;
+  padding: 15px 0 0 0;
   width: 100%;
+  transition: opacity 0.5s;
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (max-width: $mobile-width-only) {
     &::before {
@@ -183,26 +194,59 @@
   }
 
   @media (min-width: $tablet-width) {
+    gap: 25px;
     padding: 24px 0 0 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 27px;
+    padding: 0;
   }
 }
 
 .about-programs__link-title {
-  padding: 4px 0;
+  padding: 4px 0 4px;
 }
 
 .about-programs__arrow-wrapper {
   position: relative;
-  width: 32px;
+  width: 33px;
   height: 16px;
-  padding: 3px 0;
-  align-self: center;
+  margin: 4px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 33px;
+    height: 16px;
+    margin: 11px 0;
+  }
 }
 
-.about-programs__icon-arrow {
+.about-programs__line {
   position: absolute;
   content: "";
+  top: 7px;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 18px;
+  height: 2px;
+  background-color: $black;
+  border-right: 9px solid $black;
+  display: block;
+}
+
+.about-programs__arrow {
+  position: absolute;
+  content: "";
+  top: 3px;
+  right: 4px;
+  border: 6px solid transparent;
+  display: inline-flex;
+  border-left: 6px solid $black;
+}
+
+.about-programs__link:hover .about-programs__line {
+  width: 26px;
+}
+
+.about-programs__link:hover .about-programs__arrow {
+  right: -3px;
 }

@@ -14,7 +14,7 @@
   position: relative;
   min-width: 280px;
   display: flex;
-  padding: 25px 20px 35px;
+  padding: 25px 20px 35px 0;
 
   &::before {
     position: absolute;
@@ -29,7 +29,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 38px 30px 80px;
+    padding: 38px 30px 79px;
 
     &::before {
       top: 40%;
@@ -38,18 +38,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 35px 110px 81px 70px;
+    padding: 35px 110px 80px 70px;
 
     &::before {
-      top: 35%;
-      transform: translateY(-35%);
+      top: 40%;
+      transform: translateY(-40%);
     }
   }
 }
 
 .add-products__title-wrapper {
   display: block;
-  padding: 0 21px 0 0;
+  padding: 0 21px 0 20px;
   background-color: $white;
   z-index: 2;
 
@@ -68,14 +68,14 @@
   flex-wrap: wrap;
   padding: 0 20px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
-    gap: 80px;
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 110px 86px;
+    gap: 80px;
   }
 }
 
@@ -87,7 +87,6 @@
   margin-block: 0;
   padding-inline: 0;
   min-width: 280px;
-
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -96,6 +95,7 @@
 
   @media (min-width: $desktop-width) {
     min-width: 893px;
+    margin: 0;
   }
 }
 
@@ -104,21 +104,34 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 15px;
-  padding: 13px 0 19px;
+  padding: 12px 0 19px;
   border-bottom: 1px solid $gray-field;
 
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px;
     border: 1px solid $gray-field;
-    gap: 25px;
+    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     gap: 40px;
+    max-width: 895px;
     padding: 15px 0 17px;
     border: 0;
     border-bottom: 1px solid $gray-field;
+  }
+}
+
+.add-products__item--milk {
+  padding: 12px 0 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 0 16px;
   }
 }
 
@@ -148,15 +161,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 163px;
-    align-items: center;
+    width: 611px;
+    gap: 50px;
   }
 }
 
 .add-products__card-title {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 4px;
+  }
+
   @media (min-width: $desktop-width) {
-    min-width: 161px;
+    max-width: 161px;
     text-align: left;
+    padding: 10px 0;
   }
 }
 
@@ -168,19 +186,58 @@
   @media (min-width: $tablet-width) {
     gap: 49px;
     align-self: flex-end;
+    padding-top: 1px;
+    padding-right: 3px;
+    max-width: 142px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 10px 0;
-    gap: 112px;
+    min-width: 285px;
+    padding: 3px 0 7px;
+    gap: 10px;
     align-items: center;
+  }
+}
+
+.add-products__container-sugar {
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+    max-width: 224px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 0;
+  }
+}
+
+.add-products__container-water {
+  @media (min-width: $tablet-width) {
+    max-width: 156px;
+    padding-top: 3px;
+    gap: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 0 6px;
+  }
+}
+
+.add-products__container-vitamins {
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    max-width: 215px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 0 6px;
   }
 }
 
 .add-products__description {
   @media (min-width: $desktop-width) {
-    min-width: 131px;
+    max-width: 131px;
     text-align: left;
+    margin-right: auto;
   }
 }
 
@@ -193,22 +250,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 42px;
+    max-width: 42px;
     text-align: left;
   }
 }
 
 .add-products__gift {
-  position: relative;
-  display: block;
   width: 100%;
   min-height: 360px;
   padding: 35px 0;
-  margin: 0 auto;
+  display: block;
+
 
   @media (min-width: $tablet-width) {
     max-width: 708px;
-    min-height: 345px;
+    min-height: 200px;
     padding: 69px 0 76px;
   }
 
@@ -220,59 +276,50 @@
   }
 }
 
-.add-products__picture-wrapper {
-  display: block;
+.add-products__gift-container {
   width: 100%;
-  height: auto;
-  background-color: $green-opasity;
-}
+  display: block;
+  background-image: url("../img/gift/gift-all.jpg");
+  background-repeat: no-repeat;
+  background-position: 35% 15%;
+  background-size: cover;
 
-.add-products__picture-cat {
-  width: 280px;
-  height: 290px;
-  margin: 0 auto;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift/gift-all@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    height: 200px;
+    background-position: 55% 60%;
   }
 
   @media (min-width: $desktop-width) {
-    width: 245px;
-    height: 289px;
+    background-position: 80% center;
   }
 }
 
 .add-products__gift-wrapper {
-  position: absolute;
-  content: "";
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 48px;
-  min-width: 280px;
+  max-width: 280px;
   min-height: 290px;
   padding: 58px 61px 43px 58px;
   text-align: center;
-  background-color: transparent;
+  background-color: $green-opasity;
 
   @media (min-width: $tablet-width) {
-    top: 69px;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 708px;
+    max-width: 708px;
     min-height: 200px;
     padding: 57px 124px 60px 77px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 245px;
+    max-width: 245px;
     min-height: 289px;
     padding: 56px 43px 42px 41px;
   }
@@ -294,17 +341,24 @@
   }
 }
 
+.add-products__icon {
+  width: 80px;
+  height: 83px;
+}
+
 .add-products__gift-description {
   max-width: 161px;
-  max-height: 62px;
+  min-height: 62px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding-top: 3px;
     text-align: left;
     align-self: center;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 0;
     text-align: center;
   }
 }

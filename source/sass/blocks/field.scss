@@ -5,12 +5,14 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 14px 20px 13px;
-  border: 1px solid $gray-field;
+  border: 0;
+  outline: 1px solid #e7e7e7;
   background-color: $white;
   resize: none;
   max-width: 100%;
   width: 100%;
   flex-grow: 1;
+  transition: outline 0.5s;
 
   &::placeholder {
     color: $dark-gray;
@@ -21,30 +23,79 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.field--secondary {
-  padding: 14px 52px 13px 15px;
+  &:hover {
+    outline: 1px solid $gray-field;
+  }
+
+  &:focus {
+    outline: 1px solid $dark-gray;
+  }
+
+  &:active {
+    outline: 1px solid rgba(94, 170, 47, 0.6);
+  }
 }
 
 .field--textarea {
+  display: block;
   width: 100%;
   min-height: 150px;
   padding: 10px 12px 10px 15px;
 
   @media (min-width: $tablet-width) {
+    min-height: 174px;
     padding: 10px 19px;
   }
 }
 
 .field--mail {
+  @media (max-width: $mobile-width-only) {
+    padding: 14px 52px 13px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 52px 11px 20px;
+  }
+
   @media (min-width: $desktop-width) {
     min-width: 486px;
   }
 }
 
 .field--phone {
+  @media (max-width: $mobile-width-only) {
+    padding: 15px 52px 12px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 52px 11px 20px;
+  }
+
   @media (min-width: $desktop-width) {
     min-width: 467px;
   }
+}
+
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.field:focus .fieldset-information__icon-wrapper {
+  color: $green;
+}
+
+.field:active .fieldset-information__icon-wrapper {
+  color: $green;
+}
+
+
+/*При некорректном заполнении поля, ей присваивантся класс .field-error*/
+.field--error {
+  outline: 1px solid $error-color;
+}
+
+.field--error ~ div {
+  color: $error-color;
 }

@@ -4,7 +4,6 @@
 }
 
 .examples__wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -31,7 +30,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 21px;
   text-align: left;
 
   @media (min-width: $tablet-width) {
@@ -50,7 +49,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 43px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,10 +72,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    gap: 42px;
+    padding-right: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
@@ -85,21 +88,22 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 9px;
   text-align: center;
   margin-block: 0;
   margin-bottom: 12px;
-  padding: 15px 42px 18px 43px;
-  border: 1px solid $gray-field;
+  min-width: 123px;
+  padding: 15px 43px;
+  outline: 1px solid $gray-field;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {
+    min-width: 162px;
     padding: 15px 57px 20px;
   }
 }
 
 .examples__describe--days {
-  padding: 15px 22px 18px 21px;
+  padding: 15px 21px 18px 20px;
 
   @media (min-width: $tablet-width) {
     padding: 15px 30px 20px;
@@ -107,9 +111,10 @@
 }
 
 .examples__comment {
+  display: block;
   position: absolute;
   content: "";
-  top: 47px;
+  top: 80%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 12px;
@@ -124,6 +129,7 @@
     min-width: 114px;
     padding: 16px 10px 20px 8px;
     background-color: $white;
+    top: 65%;
   }
 
   @media (min-width: $desktop-width) {
@@ -135,7 +141,7 @@
   @media (min-width: $tablet-width) {
     min-width: 142px;
     padding: 5px 9px 8px 8px;
-    top: 58px;
+    top: 80%;
   }
 }
 
@@ -153,6 +159,7 @@
     flex-direction: column;
     justify-content: flex-end;
     text-align: right;
+    gap: 9px;
   }
 
   @media (min-width: $desktop-width) {
@@ -164,6 +171,7 @@
 }
 
 .examples__slider {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 280px;
@@ -209,17 +217,21 @@
 }
 
 .examples__slider-control {
-  position: relative;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   justify-self: end;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 4px;
   height: 100%;
-  background-color: #666666;
-  border-radius: 2px;
+
+  @media (min-width: $desktop-width) {
+    max-height: 512px;
+  }
 }
 
 .examples__slider-button {
@@ -230,18 +242,76 @@
   top: 50%;
   transform: translateY(-50%);
   left: -18px;
+  background-color: $white;
   border: 2px solid #666666;
   border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: border 0.5s;
+
+  &:hover {
+    border: 2px solid $green;
+  }
+
+  &:active {
+    border: 2px solid rgba(94, 170, 47, 0.6);
+  }
 }
 
-.examples__slider-arrow {
+.examples__arrow-left,
+.examples__arrow-right {
   position: absolute;
   content: "";
-  width: 24px;
-  height: 18px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  border: 9px solid transparent;
+  display: inline-flex;
+}
+
+.examples__arrow-left {
+  top: 11px;
+  left: 6px;
+  border-right: 9px solid #666666;
+  border-left: none;
+}
+
+.examples__arrow-right {
+  top: 11px;
+  right: 6px;
+  border-left: 9px solid #666666;
+  border-right: none;
+}
+
+.examples__slider-button:hover .examples__arrow-left {
+  border-right: 9px solid $green;
+}
+
+.examples__slider-button:hover .examples__arrow-right {
+  border-left: 9px solid $green;
+}
+
+.examples__slider-button:active .examples__arrow-left {
+  border-right: 9px solid rgba(94, 170, 47, 0.6);
+}
+
+.examples__slider-button:active .examples__arrow-right {
+  border-left: 9px solid rgba(94, 170, 47, 0.6);
+}
+
+.examples__line {
+  width: 100%;
+  height: 100%;
+  background-color: #666666;
+  border-radius: 2px;
+  transition: background-color 0.5s;
+
+  @media (min-width: $desktop-width) {
+    max-height: 512px;
+  }
+}
+
+.examples__slider-button:hover ~ .examples__line {
+  background-color: $green;
+}
+
+.examples__slider-button:active ~ .examples__line {
+  background-color: rgba(94, 170, 47, 0.6);
 }
