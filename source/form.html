@@ -345,23 +345,24 @@
           </section>
           <section class="main-program__section cooperation cooperation--color">
             <div class="cooperation__container">
-              <div class="cooperation__information">
+              <div class="cooperation__information cooperation__information--background">
                 <h2 class="cooperation__title title title--secondary title--uppercase">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
                 <address class="cooperation__description description description--address">
                   <span>ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span>
                   <span>Санкт-Петербург</span>
                 </address>
               </div>
-              <iframe class="cooperation__map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.320472477109544!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1686028299322!5m2!1sru!2sru"
-                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="Координаты магазина на карте"></iframe>
-              <noscript>
+              <div class="cooperation__map-wrapper">
+                <iframe class="cooperation__map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.320472477109544!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1686028299322!5m2!1sru!2sru"
+                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Координаты магазина на карте">
+                </iframe>
                 <a class="cooperation__link link" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
                       srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
@@ -380,7 +381,7 @@
                     </defs>
                   </svg>
                 </a>
-              </noscript>
+              </div>
             </div>
           </section>
         </div>

@@ -68,7 +68,7 @@
       height: 694px;
       top: 0;
       right: 0;
-      background: $green url("../img/header/cat-hero-desktop.jpg") no-repeat center / cover;
+      background: $green-opasity url("../img/header/cat-hero-desktop.jpg") no-repeat center / cover;
       z-index: 2;
 
       @media (min-resolution: 2dppx) {

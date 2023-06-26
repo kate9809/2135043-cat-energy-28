@@ -261,7 +261,6 @@
   padding: 35px 0;
   display: block;
 
-
   @media (min-width: $tablet-width) {
     max-width: 708px;
     min-height: 200px;
@@ -302,7 +301,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 48px;
-  max-width: 280px;
+  min-width: 280px;
   min-height: 290px;
   padding: 58px 61px 43px 58px;
   text-align: center;

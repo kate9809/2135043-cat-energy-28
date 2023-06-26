@@ -58,6 +58,12 @@
       background-color: $green;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: 16px;
+    }
+  }
 }
 
 .link--current-light {
