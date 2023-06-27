@@ -71,14 +71,22 @@ const createWebp = () => {
 //SVG
 
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/stack/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-const stack = () => {
+const makeStack = () => {
   return gulp.src('source/img/stack/*.svg')
-    .pipe(svgo())
+    .pipe(svgo({
+      plugins: [
+        {
+          removeViewBox: false,
+        },
+        'sortAttrs',
+      ],
+    }))
+    .pipe(stacksvg())
     .pipe(rename('stack.svg'))
     .pipe(gulp.dest('build/img'));
 }
@@ -145,7 +153,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    stack,
+    makeStack,
     createWebp
   ),
 );
@@ -161,7 +169,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    stack,
+    makeStack,
     createWebp
   ),
   gulp.series(
