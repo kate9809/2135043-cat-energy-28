@@ -36,6 +36,21 @@
   &:active {
     outline: 1px solid rgba(94, 170, 47, 0.6);
   }
+
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &[type="number"]:hover,
+  &[type="number"]:focus {
+    appearance: number-input;
+  }
 }
 
 .field--textarea {
@@ -76,11 +91,6 @@
   @media (min-width: $desktop-width) {
     min-width: 467px;
   }
-}
-
-.field::-webkit-outer-spin-button,
-.field::-webkit-inner-spin-button {
-  appearance: none;
 }
 
 .field:focus .fieldset-information__icon-wrapper {

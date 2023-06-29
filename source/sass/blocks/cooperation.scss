@@ -1,14 +1,5 @@
 .cooperation {
   width: 100%;
-  min-height: 474px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 599px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 400px;
-  }
 }
 
 .cooperation--color {
@@ -18,17 +9,11 @@
 .cooperation__container {
   position: relative;
   min-width: 320px;
-  min-height: 474px;
   display: block;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
-    min-height: 599px;
-  }
-
   @media (min-width: $desktop-width) {
     max-width: 1440px;
-    min-height: 400px;
   }
 }
 
@@ -116,11 +101,19 @@
 
 .cooperation__map {
   display: block;
-  border: none;
+  border: 0;
   width: 100%;
   min-height: 362px;
   cursor: pointer;
   z-index: 2;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 400px;
@@ -139,6 +132,19 @@
   min-height: 362px;
   display: block;
   z-index: 1;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 400px;

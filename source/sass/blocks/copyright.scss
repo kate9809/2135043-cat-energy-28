@@ -5,11 +5,14 @@
   min-height: 74px;
 
   @media (min-width: $tablet-width) {
+    min-width: 217px;
+    max-width: 220px;
     padding: 25px 10px 25px 40px;
-    margin-left: 0;
+    margin-left: auto;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 270px;
     padding: 34px 20px 40px 65px;
   }
 }
@@ -21,8 +24,9 @@
   width: 100%;
   transition: opacity 0.5s;
 
-  &:focus {
-    outline: 0;
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
   }
 
   &:active {

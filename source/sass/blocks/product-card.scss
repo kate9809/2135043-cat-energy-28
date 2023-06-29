@@ -17,6 +17,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 245px;
+    min-height: 431px;
     margin-top: 80px;
   }
 }
@@ -34,6 +35,19 @@
   flex-direction: column;
   gap: 13px;
   padding: 19px 0 25px;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -87,14 +101,6 @@
   cursor: pointer;
   transition: opacity 0.5s;
 
-  &:hover {
-    opacity: 60%;
-  }
-
-  &:active {
-    opacity: 30%;
-  }
-
   @media (min-width: $tablet-width) {
     max-width: 248px;
   }
@@ -121,7 +127,6 @@
 .product-card__picture {
   min-width: 68px;
   min-height: 78px;
-
 
   @media (min-width: $tablet-width) {
     width: 161px;
@@ -289,7 +294,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 10px 0 12px;
-    margin: 0 0 17px 0;
+    margin: 2px 0 17px 0;
   }
 }
 
