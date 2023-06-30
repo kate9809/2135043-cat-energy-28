@@ -224,7 +224,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    background: url("../img/stack/icon-checkbox.svg") no-repeat center center / cover;
+    background: url("../img/stack.svg#icon-checkbox") no-repeat center center / cover;
 
     @media (min-width: $tablet-width) {
       width: 24px;
@@ -238,6 +238,10 @@
 }
 
 .fieldset-information__control-input:focus + .fieldset-information__control-mark {
+  outline: 1px solid $black;
+}
+
+.fieldset-information__control-input:active + .fieldset-information__control-mark {
   outline: 1px solid $black;
 }
 
@@ -420,7 +424,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 38px 110px 10px 110px;
+    padding: 38px 110px 7px 110px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -434,6 +438,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 28px 110px 10px;
+    padding: 29px 110px 10px;
   }
 }

@@ -1,14 +1,5 @@
 .cooperation {
   width: 100%;
-  min-height: 474px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 599px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 400px;
-  }
 }
 
 .cooperation--color {
@@ -18,17 +9,11 @@
 .cooperation__container {
   position: relative;
   min-width: 320px;
-  min-height: 474px;
   display: block;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
-    min-height: 599px;
-  }
-
   @media (min-width: $desktop-width) {
     max-width: 1440px;
-    min-height: 400px;
   }
 }
 
@@ -37,6 +22,7 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 25px 20px 26px;
+  background-color: $white;
 
   @media (min-width: $tablet-width) {
     padding: 56px 70px 56px;
@@ -44,17 +30,23 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    content: "";
+    position: relative;
     top: 95px;
     left: 110px;
-    width: 100%;
     max-width: 565px;
     min-height: 198px;
     padding: 56px 60px 56px 80px;
-    background-color: $white;
     gap: 40px;
     z-index: 3;
+    margin-bottom: -198px;
+  }
+}
+
+.cooperation__information--background {
+  background-color: $light-gray;
+
+  @media (min-width: $desktop-width) {
+    background-color: $white;
   }
 }
 
@@ -94,46 +86,89 @@
   }
 }
 
-.cooperation__map {
-  position: absolute;
-  content: "";
-  top: 112px;
-  left: 0;
-  display: block;
-  border: none;
+.cooperation__map-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 362px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    top: 199px;
     min-height: 400px;
-    margin-bottom: -199px;
+  }
+}
+
+.cooperation__map {
+  display: block;
+  border: 0;
+  width: 100%;
+  min-height: 362px;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
     min-height: 400px;
-    margin-bottom: 0;
   }
 }
 
 .cooperation__link {
   position: absolute;
-  content: "";
-  width: 100%;
-  min-height: 362px;
-  top: 112px;
+  top: 0;
   left: 0;
+  min-width: 100%;
+  min-height: 362px;
   display: block;
+  z-index: 1;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
-    top: 199px;
     min-height: 400px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
+    min-height: 400px;
+  }
+}
+
+.cooperation__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  min-height: 362px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1440px;
     min-height: 400px;
   }
 }

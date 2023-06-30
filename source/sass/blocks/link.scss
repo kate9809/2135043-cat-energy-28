@@ -58,6 +58,12 @@
       background-color: $green;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: 16px;
+    }
+  }
 }
 
 .link--current-light {
@@ -77,8 +83,8 @@
     color: $green;
   }
 
-  &:focus {
-    outline: 0;
+  &:focus-visible {
+    outline: none;
     color: $green;
   }
 
