@@ -115,6 +115,11 @@
     opacity: 60%;
   }
 
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+
   &:active {
     opacity: 30%;
   }
