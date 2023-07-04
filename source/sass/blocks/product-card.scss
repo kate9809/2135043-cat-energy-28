@@ -88,9 +88,15 @@
   max-width: 280px;
   cursor: pointer;
   transition: opacity 0.5s;
+  color: $dark-gray;
 
   &:hover {
     opacity: 60%;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: -2px;
   }
 
   &:active {
